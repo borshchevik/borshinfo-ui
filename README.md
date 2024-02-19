@@ -1,1 +1,1 @@
-# qtuminfo-ui
+# borshinfo-ui

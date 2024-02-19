@@ -1,14 +1,14 @@
 export default {
   mainnet: {
-    pubkey: 0x3a,
-    pubkeyhash: 0x3a,
-    scripthash: 0x32,
-    witness_hrp: 'qc'
+    pubkey: 0x19,
+    pubkeyhash: 0x19,
+    scripthash: 0x35,
+    witness_hrp: 'bc'
   },
   testnet: {
-    pubkey: 0x78,
-    pubkeyhash: 0x78,
-    scripthash: 0x6e,
-    witness_hrp: 'tq'
+    pubkey: 0x55,
+    pubkeyhash: 0x55,
+    scripthash: 0x70,
+    witness_hrp: 'tb'
   }
 }[process.env.network || 'mainnet']

@@ -2,7 +2,7 @@ import webpack from 'webpack'
 
 export default {
   head: {
-    titleTemplate: '%s - qtum.info',
+    titleTemplate: '%s - borsh.pw',
     meta: [
       {charset: 'utf-8'},
       {name: 'viewport', content: 'width=device-width, initial-scale=1, user-scalable=no'}
@@ -29,13 +29,13 @@ export default {
         use: 'yaml-loader'
       })
       config.plugins.push(new webpack.DefinePlugin({
-        'process.env.qtuminfoAPIBase': JSON.stringify(process.env.QTUMINFO_API_BASE
-          || process.env[isServer ? 'QTUMINFO_API_BASE_SERVER' : 'QTUMINFO_API_BASE_CLIENT']
+        'process.env.borshinfoAPIBase': JSON.stringify(process.env.BORSHINFO_API_BASE
+          || process.env[isServer ? 'BORSHINFO_API_BASE_SERVER' : 'BORSHINFO_API_BASE_CLIENT']
           || 'http://localhost:7001/'),
-        'process.env.qtuminfoWSBase': JSON.stringify(process.env.QTUMINFO_WS_BASE
-          || process.env.QTUMINFO_API_BASE_WS
+        'process.env.borshinfoWSBase': JSON.stringify(process.env.BORSHINFO_WS_BASE
+          || process.env.BORSHINFO_API_BASE_WS
           || '//localhost:7001/'),
-        'process.env.network': JSON.stringify(process.env.QTUM_NETWORK || 'mainnet')
+        'process.env.network': JSON.stringify(process.env.BORSH_NETWORK || 'mainnet')
       }))
     },
     extractCSS: true,
@@ -49,7 +49,7 @@ export default {
   plugins: [
     '~/plugins/components.js',
     '~/plugins/i18n.js',
-    '~/plugins/qtum-utils.js',
+    '~/plugins/borsh-utils.js',
     {src: '~/plugins/websocket.js', ssr: false}
   ]
 }
